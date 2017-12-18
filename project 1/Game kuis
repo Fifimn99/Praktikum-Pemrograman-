@@ -1,0 +1,44 @@
+#include<iostream>
+using namespace std;
+
+	
+int main()
+{
+	cout<< "Welcome to quiz nya fifi"<<endl<<endl;
+	
+	int jumlah_soal = 4;
+	
+	string soal[jumlah_soal];
+	soal[0] = "Presiden Pertama RI ?";
+	soal[1] = "Makan Pagi";
+	soal[2]= "apakah fifi baper?";
+	soal[3]="dengan siapa fifi baper?";
+	
+	string jawaban[jumlah_soal];
+	
+	jawaban[0] = "soekarno";
+	jawaban[1] = "sarapan";
+	jawaban[2]= "ya";
+	jawaban[3]= "kepo";
+	
+	string jawabanUser[jumlah_soal];
+	
+	int poin=0;
+	//cout << sizeof(soal) / sizeof(soal[0]);
+	for (int i=0; i < jumlah_soal; i++){
+		cout << (i+1) << ". " << soal[i] <<endl;
+		cout << "Jawaban anda ";
+		cin>>jawabanUser[i];
+			if(jawabanUser[i]==jawaban[i]){
+				//cout << "Benar";
+				poin=poin+25;
+			}
+			
+	}
+	cout << "==============================================" << endl;
+	cout << "Quiz Selesai" << endl;
+	cout << "Poin Anda " << poin;
+	
+	return 0;
+}
+	
